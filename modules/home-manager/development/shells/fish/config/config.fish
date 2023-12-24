@@ -27,7 +27,6 @@ alias lah='eza --icons -lahg'
 alias open='xdg-open'
 alias update-dots='nix run home-manager/release-23.11 -- switch --flake ~/dotfiles/#shaun'
 alias nix-clean='nix-collect-garbage  --delete-old'
-alias ssh='ssh -o ServerAliveInterval=30'
 
 #Variables
 set -gx EDITOR nvim
