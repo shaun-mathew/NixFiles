@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./btop.nix
+    ./btop
   ];
   home.packages = with pkgs; [
     #shell utilities
