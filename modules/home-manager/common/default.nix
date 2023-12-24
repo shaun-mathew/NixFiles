@@ -15,6 +15,7 @@
     fd
     ripgrep
     eza
+    clipboard-jh
     
     #nerdfonts
     (nerdfonts.override { fonts = [ "CodeNewRoman" "Iosevka" "IosevkaTerm" "FiraCode"]; })
