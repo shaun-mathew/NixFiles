@@ -2,15 +2,14 @@
 
 {
 
-  programs.git.enable = true;
-  home.file.".gitconfig".text = ''
-  [init]
-    defaultBranch = main
-  [user]
-    email = "shaunmathew123@gmail.com"
-    name = "shaun-mathew"
-  [core]
-    editor = nvim
-  '';
+  programs.git = {
+    enable = true;
+    userName  = "shaun-mathew";
+    userEmail = "shaunmathew123@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+      core.editor = "nvim";
+    };
+  };
 
 }
