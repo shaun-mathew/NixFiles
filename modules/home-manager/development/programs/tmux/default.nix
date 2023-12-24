@@ -64,6 +64,7 @@ in
     baseIndex = 1;
     escapeTime = 0;
     terminal = "xterm-kitty";
+    shell = "${pkgs.fish}/bin/fish";
 
     plugins = with pkgs; [
       tmuxPlugins.yank
