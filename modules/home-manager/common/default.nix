@@ -19,4 +19,8 @@
     #nerdfonts
     (nerdfonts.override { fonts = [ "CodeNewRoman" "Iosevka" "IosevkaTerm" "FiraCode"]; })
   ];
+
+  programs.nix-index.enable = true;
+  programs.nix-index-database.comma.enable = true;
+
 }
