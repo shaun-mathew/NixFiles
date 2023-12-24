@@ -1,4 +1,7 @@
 {pkgs, lib, config, dotfiles,...}:
+let
+  configPath = pkgs.lib.concatStringsSep "/" [dotfiles "modules/home-manager/development/editors/neovim/config"];
+in 
 
 {
 
@@ -16,8 +19,8 @@
   };
 
   xdg.configFile."nvim" = {
-    source = ./config;
-    recursive = true;
+      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink configPath;
   };
 
 }
