@@ -7,12 +7,12 @@
     associations = [
       {
           mime = "text/*";
-          command = "bat --paging=never  --color=always %pistol-filename%";
+          command = "${pkgs.bat}/bin/bat --paging=never  --color=always %pistol-filename%";
       }
 
       {
           mime = "application/json";
-          command = "bat --paging=never --color=always %pistol-filename%";
+          command = "${pkgs.bat}/bin/bat --paging=never --color=always %pistol-filename%";
       }
 
       {
@@ -22,7 +22,7 @@
 
       {
         mime = "image/*";
-        command = "kitty +kitten icat --silent --transfer-mode=stream --stdin=no %pistol-filename%";
+        command = "${pkgs.kitty}/bin/kitty +kitten icat --silent --transfer-mode=stream --stdin=no %pistol-filename%";
       } 
 
     ];
