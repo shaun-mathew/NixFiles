@@ -68,12 +68,13 @@ in
 
     plugins = with pkgs; [
       tmuxPlugins.yank
-      { plugin = tmuxPlugins.resurrect;    
-        extraConfig = ''set -g @resurrect-strategy-nvim 'session'   
-                        set -g @resurrect-strategy-vim 'session' ''; 
+      { plugin = tmuxPlugins.resurrect;
+        extraConfig = ''set -g @resurrect-strategy-nvim 'session'
+                        set -g @resurrect-strategy-vim 'session' '';
       }
-      { plugin = tmuxPlugins.continuum;    extraConfig = "set -g @continuum-restore 'on'";  } 
-      { plugin = tmuxPlugins.catppuccin;   
+      { plugin = tmuxPlugins.continuum;    extraConfig = "set -g @continuum-restore 'on'";  }
+      { plugin = tmuxPlugins.tmux-thumbs;  extraConfig = "set -g @thumbs-command 'echo -n {} | xsel --clipboard --input'";  }
+      { plugin = tmuxPlugins.catppuccin;
         extraConfig = ''
           set -g @catppuccin_window_left_separator ""
           set -g @catppuccin_window_right_separator " "
