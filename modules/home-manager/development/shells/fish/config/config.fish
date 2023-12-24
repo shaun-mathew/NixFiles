@@ -23,7 +23,7 @@ export FZF_CTRL_T_OPTS="
 
 # Aliases
 alias ll='eza --icons'
-alias lah='eza --icons -lah'
+alias lah='eza --icons -lahg'
 alias open='xdg-open'
 alias update-dots='nix run home-manager/release-23.11 -- switch --flake ~/dotfiles/#shaun'
 alias nix-clean='nix-collect-garbage  --delete-old'
