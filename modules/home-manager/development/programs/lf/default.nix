@@ -3,6 +3,7 @@
 {
   imports = [
     ../pistol.nix
+    ../broot.nix
   ];
   xdg.configFile."lf/icons".source = ./icons;
 
@@ -31,7 +32,7 @@
         %{{
           printf "Jump Directory: "
           read DIR
-          result="$(zoxide query --exclude $PWD $DIR | sed 's/\\/\\\\/g;s/"/\\"/g')"
+          result="$(${pkgs.zoxide}/bin/zoxide query --exclude $PWD $DIR | sed 's/\\/\\\\/g;s/"/\\"/g')"
             lf -remote "send $id cd \"$result\""
         }}
       '';
@@ -41,7 +42,7 @@
           printf "Trash selection? [y/n]: "
           read ans
           if [ "$ans" = "y" ]; then
-            trash-put $fx
+            ${pkgs.trash-cli}/bin/trash-put $fx
           else
             echo "aborting"
           fi

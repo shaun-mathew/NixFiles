@@ -7,7 +7,6 @@
     ./git.nix
     ./sshfs.nix
     ./lf
-    ./broot.nix
     ./tmux
   ];
 
