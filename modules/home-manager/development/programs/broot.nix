@@ -1,7 +1,7 @@
 {pkgs, lib, config, dotfiles,...}:
 let
-  br-select = pkgs.writeShellScriptBin "br-select" ''
-    broot --conf ~/.config/broot/br-select.toml
+    br-select = pkgs.writeShellScriptBin "br-select" ''
+    broot --conf ${config.home.homeDirectory}/${config.xdg.configFile."broot/br-select.toml".target}
   '';
 in
 
@@ -18,7 +18,7 @@ in
   xdg.configFile."broot/br-select.toml".text = ''
   [[verbs]]
   invocation = "ok"
-  key = "alt-enter"
+  key = "enter"
   leave_broot = true
   execution = ":print_path"
   '';
