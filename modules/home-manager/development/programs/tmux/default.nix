@@ -73,7 +73,7 @@ in
                         set -g @resurrect-strategy-vim 'session' '';
       }
       { plugin = tmuxPlugins.continuum;    extraConfig = "set -g @continuum-restore 'on'";  }
-      { plugin = tmuxPlugins.tmux-thumbs;  extraConfig = "set -g @thumbs-command 'echo -n {} | xsel --clipboard --input'";  }
+      { plugin = tmuxPlugins.tmux-thumbs;  extraConfig = "set -g @thumbs-command 'echo -n {} | ${pkgs.xsel}/bin/xsel --clipboard --input'";  }
       { plugin = tmuxPlugins.catppuccin;
         extraConfig = ''
           set -g @catppuccin_window_left_separator ""
