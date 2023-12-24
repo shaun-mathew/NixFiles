@@ -20,6 +20,8 @@
       }}
       '';
 
+      editor-open = ''$$EDITOR $f'';
+
       mkfile = ''
       %{{
         printf "Create File: "
@@ -140,6 +142,7 @@
       "\\'" = "mark-load";
       "zp" = "toggle_preview";
       "<enter>" = "open";
+      "<c-e>" = "editor-open";
 
       "g~" = "cd";
       "g/" = "cd /";
