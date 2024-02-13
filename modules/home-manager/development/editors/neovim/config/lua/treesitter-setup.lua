@@ -69,6 +69,9 @@ vim.defer_fn(function()
         },
       },
     },
+    autotag = {
+      enable = true,
+    },
   }
 end, 0)
 
