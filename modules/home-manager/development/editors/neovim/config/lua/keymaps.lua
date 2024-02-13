@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-vim.keymap.set("n", "-", require("oil").open, { desc = "Open File Explorer" })
+vim.keymap.set('n', '-', require('oil').open, { desc = 'Open File Explorer' })
 
 vim.keymap.set('t', '<c-\\><c-\\>', '<c-\\><c-n>', { desc = 'Switch to normal mode' })
 vim.keymap.set('t', '<c-h>', '<c-\\><c-n><c-w>h', { desc = 'Switch focus left' })

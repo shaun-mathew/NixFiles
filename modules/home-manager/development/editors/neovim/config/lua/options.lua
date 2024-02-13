@@ -2,7 +2,7 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme 'catppuccin'
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -54,19 +54,20 @@ vim.o.shiftwidth = 4
 
 vim.o.scrolloff = 999
 
-vim.opt.inccommand = "split"
+vim.opt.inccommand = 'split'
 
-vim.opt.shortmess:append({ I = true, C = true })
+vim.opt.shortmess:append { I = true, C = true }
 
-vim.opt.confirm = true    -- Confirm to save changes before exiting modified buffer
+vim.opt.confirm = true -- Confirm to save changes before exiting modified buffer
 vim.opt.cursorline = true -- Enable highlighting of the current line
 
-vim.opt.grepformat = "%f:%l:%c:%m"
-vim.opt.grepprg = "rg --vimgrep"
+vim.opt.grepformat = '%f:%l:%c:%m'
+vim.opt.grepprg = 'rg --vimgrep'
 
-vim.opt.pumheight = 10                 -- Maximum number of entries in a popup
+vim.opt.pumheight = 10 -- Maximum number of entries in a popup
 
-vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
+vim.opt.wildmode = 'longest:full,full' -- Command-line completion mode
 
+vim.opt.laststatus = 3 -- global statusline
 
 -- vim: ts=2 sts=2 sw=2 et
