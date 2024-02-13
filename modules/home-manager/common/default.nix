@@ -18,6 +18,9 @@
     eza
     clipboard-jh
 
+    #nix
+    alejandra
+
     #nerdfonts
     (nerdfonts.override {
       fonts = ["CodeNewRoman" "Iosevka" "IosevkaTerm" "FiraCode"];
