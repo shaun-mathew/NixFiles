@@ -29,7 +29,6 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', function() require('lsp_signature').toggle_float_win() end, 'Toggle Signature')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -43,8 +42,6 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
-
-  require "lsp_signature".on_attach(_, bufnr)  -- Note: add in lsp client on-attach
 end
 
 -- mason-lspconfig requires that these setup functions are called in this order

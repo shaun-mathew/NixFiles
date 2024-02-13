@@ -32,17 +32,6 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "VeryLazy",
-    opts = {
-      floating_window = false,
-      hint_prefix = "💡 ",
-      toggle_key = '<C-k>'
-
-    },
-    config = function(_, opts) require 'lsp_signature'.setup(opts) end
-  },
 
   {
     -- Autocompletion
