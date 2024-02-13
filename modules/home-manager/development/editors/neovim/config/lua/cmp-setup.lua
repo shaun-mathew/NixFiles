@@ -54,15 +54,15 @@ cmp.setup {
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = 'path' },
   }, {
     {
       name = 'cmdline',
       option = {
-        ignore_cmds = { 'Man', '!' }
-      }
-    }
-  })
+        ignore_cmds = { 'Man', '!' },
+      },
+    },
+  }),
 })
 
 -- vim: ts=2 sts=2 sw=2 et
