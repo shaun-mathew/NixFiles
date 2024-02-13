@@ -1,11 +1,9 @@
-{pkgs, lib, config, dotfiles,...}:
-
 {
-  imports = [
-    ./shells
-    ./editors
-    ./programs
-    ./terminals
-  ];
-
+  pkgs,
+  lib,
+  config,
+  dotfiles,
+  ...
+}: {
+  imports = [./shells ./editors ./programs ./terminals];
 }

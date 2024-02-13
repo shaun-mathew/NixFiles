@@ -1,9 +1,10 @@
-{config, pkgs, pkgs-unstable, ...}:
-
 {
-  imports = [
-    ./btop
-  ];
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
+  imports = [./btop];
   home.packages = with pkgs; [
     #shell utilities
     neofetch
@@ -16,12 +17,13 @@
     ripgrep
     eza
     clipboard-jh
-    
+
     #nerdfonts
-    (nerdfonts.override { fonts = [ "CodeNewRoman" "Iosevka" "IosevkaTerm" "FiraCode"]; })
+    (nerdfonts.override {
+      fonts = ["CodeNewRoman" "Iosevka" "IosevkaTerm" "FiraCode"];
+    })
   ];
 
   programs.nix-index.enable = true;
   programs.nix-index-database.comma.enable = true;
-
 }

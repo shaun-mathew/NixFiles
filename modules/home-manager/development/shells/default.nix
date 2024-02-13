@@ -1,8 +1,9 @@
-{pkgs, lib, config, dotfiles,...}:
-
 {
-  imports = [
-    ./fish
-  ];
-
+  pkgs,
+  lib,
+  config,
+  dotfiles,
+  ...
+}: {
+  imports = [./fish];
 }

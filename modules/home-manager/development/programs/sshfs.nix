@@ -1,9 +1,9 @@
-
-{pkgs, lib, config, dotfiles,...}:
-
 {
-  home.packages = with pkgs; [
-    sshfs
-  ];
-
+  pkgs,
+  lib,
+  config,
+  dotfiles,
+  ...
+}: {
+  home.packages = with pkgs; [sshfs];
 }

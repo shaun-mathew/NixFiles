@@ -1,8 +1,9 @@
-{pkgs, lib, config, dotfiles,...}:
-
 {
-  imports = [
-    ./neovim
-  ];
-
+  pkgs,
+  lib,
+  config,
+  dotfiles,
+  ...
+}: {
+  imports = [./neovim];
 }

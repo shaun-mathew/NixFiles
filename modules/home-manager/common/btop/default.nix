@@ -1,7 +1,9 @@
-
-{config, pkgs, pkgs-unstable, ... }:
-
 {
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   programs.btop = {
     enable = true;
     settings = {
@@ -10,10 +12,8 @@
     };
   };
 
-
   xdg.configFile."btop/themes" = {
     recursive = true;
     source = ./themes;
   };
-
 }

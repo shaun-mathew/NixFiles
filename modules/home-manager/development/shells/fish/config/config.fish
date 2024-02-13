@@ -27,6 +27,7 @@ alias lah='eza --icons -lahg'
 alias open='xdg-open'
 alias update-dots='nix run home-manager/release-23.11 -- switch --flake ~/dotfiles/#shaun'
 alias nix-clean='nix-collect-garbage  --delete-old'
+alias jr='cd $(git rev-parse --show-toplevel)'
 
 #Variables
 set -gx EDITOR nvim
@@ -38,6 +39,6 @@ set -gx NNN_TRASH 1
 bind --erase \cr
 bind -M insert --erase \cr
 
-if command -q direnv
-    direnv hook fish | source
-end
+# if command -q direnv
+#     direnv hook fish | source
+# end

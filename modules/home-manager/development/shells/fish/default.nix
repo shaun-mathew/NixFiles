@@ -1,9 +1,15 @@
-{pkgs, lib, config, dotfiles, ...}:
-let
-configPath = pkgs.lib.concatStringsSep "/" [dotfiles "modules/home-manager/development/shells/fish/config"];
-in
 {
-
+  pkgs,
+  lib,
+  config,
+  dotfiles,
+  ...
+}: let
+  configPath = pkgs.lib.concatStringsSep "/" [
+    dotfiles
+    "modules/home-manager/development/shells/fish/config"
+  ];
+in {
   home.packages = with pkgs; [
     fish
 
@@ -18,6 +24,4 @@ in
     recursive = true;
     source = config.lib.file.mkOutOfStoreSymlink configPath;
   };
-
-
 }

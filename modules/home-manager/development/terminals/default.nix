@@ -1,8 +1,9 @@
-{pkgs, lib, config, dotfiles,...}:
-
 {
-  imports = [
-    ./kitty
-  ];
-
+  pkgs,
+  lib,
+  config,
+  dotfiles,
+  ...
+}: {
+  imports = [./kitty];
 }

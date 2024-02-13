@@ -19,27 +19,21 @@
     nix-index-database,
     ...
   }: let
-  system = "x86_64-linux";
-  pkgs = import nixpkgs {
-    inherit system;
-    config = {
-      allowUnfree = true;
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {allowUnfree = true;};
     };
-  };
-  pkgs-unstable = import nixpkgs-unstable {
-    inherit system;
-    config = {
-      allowUnfree = true;
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config = {allowUnfree = true;};
     };
-  };
   in {
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
     homeConfigurations = {
       shaun = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [
-          ./hosts/shaun/home.nix
-            nix-index-database.hmModules.nix-index
-        ];
+        modules = [./hosts/shaun/home.nix nix-index-database.hmModules.nix-index];
         extraSpecialArgs = {
           inherit pkgs-unstable;
           dotfiles = "/home/shaun/dotfiles";
@@ -48,5 +42,3 @@
     };
   };
 }
-
-
