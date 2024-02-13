@@ -26,4 +26,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open File Explorer" })
+
+vim.keymap.set('t', '<c-\\><c-\\>', '<c-\\><c-n>', { desc = 'Switch to normal mode' })
+vim.keymap.set('t', '<c-h>', '<c-\\><c-n><c-w>h', { desc = 'Switch focus left' })
+vim.keymap.set('t', '<c-j>', '<c-\\><c-n><c-w>j', { desc = 'Switch focus down' })
+vim.keymap.set('t', '<c-k>', '<c-\\><c-n><c-w>k', { desc = 'Switch focus up' })
+vim.keymap.set('t', '<c-l>', '<c-\\><c-n><c-w>l', { desc = 'Switch focus right' })
 -- vim: ts=2 sts=2 sw=2 et
