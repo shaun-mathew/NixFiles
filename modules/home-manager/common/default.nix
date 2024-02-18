@@ -17,6 +17,7 @@
     ripgrep
     eza
     clipboard-jh
+    lazygit
 
     #nix
     alejandra
