@@ -2,7 +2,12 @@ return {
   'ahmedkhalf/project.nvim',
   priority = 900,
   lazy = false,
-  config = function()
-    require('project_nvim').setup()
+  opts = {
+    exclude_dirs = {
+      '~/dotfiles/modules/home-manager/development/editors/neovim/config',
+    },
+  },
+  config = function(_, opts)
+    require('project_nvim').setup(opts)
   end,
 }
