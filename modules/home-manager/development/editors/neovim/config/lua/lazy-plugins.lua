@@ -161,6 +161,12 @@ require('lazy').setup({
   },
 
   {
+    'ribru17/bamboo.nvim',
+    priority = 1000,
+    opts = {},
+  },
+
+  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
