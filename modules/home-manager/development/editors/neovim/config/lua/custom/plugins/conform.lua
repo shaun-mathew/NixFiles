@@ -5,12 +5,12 @@ return {
   keys = {
     {
       -- Customize or remove this keymap to your liking
-      '<leader>F',
+      '<leader>cf',
       function()
         require('conform').format { async = true, lsp_fallback = true }
       end,
       mode = '',
-      desc = 'Format buffer',
+      desc = '[F]ormat buffer',
     },
   },
   -- Everything in opts will be passed to setup()
@@ -20,6 +20,7 @@ return {
       lua = { 'stylua' },
       python = { 'ruff_format' },
       javascript = { { 'prettierd', 'prettier' } },
+      nix = { 'alejandra' },
       ['_'] = { 'trim_whitespace', 'trim_newlines' },
     },
     -- Set up format-on-save
