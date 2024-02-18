@@ -30,6 +30,16 @@ require('lazy').setup({
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
+      {
+        'kosayoda/nvim-lightbulb',
+        opts = {
+          {
+            autocmd = {
+              enabled = true,
+            },
+          },
+        },
+      },
     },
   },
 
