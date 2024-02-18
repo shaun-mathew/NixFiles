@@ -46,4 +46,5 @@ vim.keymap.set('t', '<c-j>', '<c-\\><c-n><c-w>j', { desc = 'Switch focus down' }
 vim.keymap.set('t', '<c-k>', '<c-\\><c-n><c-w>k', { desc = 'Switch focus up' })
 vim.keymap.set('t', '<c-l>', '<c-\\><c-n><c-w>l', { desc = 'Switch focus right' })
 
+vim.keymap.set('n', '<leader>gg', ':Lazygit<CR>', { desc = 'Toggle Lazygit' })
 -- vim: ts=2 sts=2 sw=2 et
