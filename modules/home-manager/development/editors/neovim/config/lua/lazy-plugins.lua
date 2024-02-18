@@ -40,6 +40,10 @@ require('lazy').setup({
           },
         },
       },
+      {
+        'rmagatti/goto-preview',
+        opts = {},
+      },
     },
   },
 

@@ -23,6 +23,13 @@ local on_attach = function(_, bufnr)
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
+  nmap('<leader>lpd', require('goto-preview').goto_preview_definition, '[P]review [D]efinition')
+  nmap('<leader>lpt', require('goto-preview').goto_preview_type_definition, '[P]review [T]ype Definition')
+  nmap('<leader>lpi', require('goto-preview').goto_preview_implementation, '[P]review [I]mplementation')
+  nmap('<leader>lpD', require('goto-preview').goto_preview_declaration, '[P]review [D]eclaration')
+  nmap('<leader>lpp', require('goto-preview').close_all_win, 'Close Preview')
+  nmap('<leader>lpr', require('goto-preview').goto_preview_references, '[P]review References')
+
   nmap('<leader>ld', require('telescope.builtin').lsp_document_symbols, '[D]ocument Symbols')
   nmap('<leader>lt', require('telescope.builtin').lsp_type_definitions, '[T]ype efinition')
   nmap('<leader>ls', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
