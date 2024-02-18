@@ -2,6 +2,12 @@ return {
   'stevearc/oil.nvim',
   opts = {
     delete_to_trash = true,
+    columns = {
+      'icon',
+      'permissions',
+      'size',
+      'mtime',
+    },
     keymaps = {
       ['g?'] = 'actions.show_help',
       ['<CR>'] = 'actions.select',
