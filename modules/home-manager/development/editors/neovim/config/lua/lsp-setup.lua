@@ -24,7 +24,7 @@ local on_attach = function(_, bufnr)
   nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
   nmap('<leader>ld', require('telescope.builtin').lsp_document_symbols, '[D]ocument Symbols')
-  nmap('<leader>lD', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+  nmap('<leader>lt', require('telescope.builtin').lsp_type_definitions, '[T]ype efinition')
   nmap('<leader>ls', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
   nmap('<leader>lr', vim.lsp.buf.rename, '[R]ename')
 

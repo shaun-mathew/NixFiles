@@ -4,6 +4,7 @@ require('which-key').register {
   ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
   ['<leader>gh'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
   ['<leader>l'] = { name = '[L]sp Actions', _ = 'which_key_ignore' },
+  ['<leader>lw'] = { name = '[W]orkspace Actions', _ = 'which_key_ignore' },
   ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
   ['<leader>t'] = { name = '[T]erminal', _ = 'which_key_ignore' },
   ['<leader>tr'] = { name = '[T]erminal Create', _ = 'which_key_ignore' },
