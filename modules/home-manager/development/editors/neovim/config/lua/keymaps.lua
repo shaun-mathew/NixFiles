@@ -13,8 +13,8 @@ vim.keymap.set('n', '<c-j>', '<c-w><c-j>', { desc = 'Focus lower window' })
 vim.keymap.set('n', '<c-k>', '<c-w><c-k>', { desc = 'Focus upper window' })
 vim.keymap.set('n', '<c-l>', '<c-w><c-l>', { desc = 'Focus right window' })
 
-vim.keymap.set('n', '<M-h>', ':bprev<CR>', { desc = 'Goto previous buffer' })
-vim.keymap.set('n', '<M-l>', ':bnext<CR>', { desc = 'Goto next buffer' })
+vim.keymap.set('n', '[b', ':bprev<CR>', { desc = 'Goto previous buffer' })
+vim.keymap.set('n', ']b', ':bnext<CR>', { desc = 'Goto next buffer' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
