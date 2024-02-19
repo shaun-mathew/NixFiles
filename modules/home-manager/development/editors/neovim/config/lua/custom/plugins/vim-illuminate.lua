@@ -15,6 +15,7 @@ return {
       'harpoon',
       'DressingInput',
       'mason',
+      'oil',
     },
   },
   config = function(_, opts)
