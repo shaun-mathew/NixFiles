@@ -3,6 +3,7 @@ require('which-key').register {
   ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
   ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
   ['<leader>gh'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
+  ['<leader>h'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
   ['<leader>l'] = { name = '[L]sp Actions', _ = 'which_key_ignore' },
   ['<leader>lw'] = { name = '[W]orkspace Actions', _ = 'which_key_ignore' },
   ['<leader>lp'] = { name = '[P]review Actions', _ = 'which_key_ignore' },
