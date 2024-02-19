@@ -3,7 +3,7 @@ return {
   opts = {
     layout = { open_cmd = 'botright new' },
     cmd = { vim.o.shell },
-    autoclose = true,
+    autoclose = false,
   },
   config = function(_, opts)
     require('terminal').setup(opts)
@@ -19,6 +19,20 @@ return {
     vim.api.nvim_create_autocmd('TermOpen', {
       command = [[setlocal nonumber norelativenumber winhl=Normal:NormalFloat]],
     })
+
+    vim.api.nvim_create_autocmd('TermClose', {
+      callback = function(ctx)
+        vim.cmd 'stopinsert'
+        vim.api.nvim_create_autocmd('TermEnter', {
+          callback = function()
+            vim.cmd 'stopinsert'
+          end,
+          buffer = ctx.buf,
+        })
+      end,
+      nested = true,
+    })
+
     vim.keymap.set('n', '<leader>ts', term_map.toggle { open_cmd = 'belowright new' }, { desc = 'Toggle terminal horizontal split' })
     vim.keymap.set('n', '<leader>tv', term_map.toggle { open_cmd = 'belowright new' }, { desc = 'Toggle terminal vertical split' })
     vim.keymap.set('n', '<leader>tt', term_map.toggle { open_cmd = 'tabnew' }, { desc = 'Toggle terminal tab' })
