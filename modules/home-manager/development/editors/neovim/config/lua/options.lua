@@ -49,8 +49,8 @@ vim.o.splitright = true
 vim.o.wrap = false
 
 vim.o.expandtab = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 vim.o.scrolloff = 999
 
@@ -69,5 +69,7 @@ vim.opt.pumheight = 10 -- Maximum number of entries in a popup
 vim.opt.wildmode = 'longest:full,full' -- Command-line completion mode
 
 vim.opt.laststatus = 3 -- global statusline
+
+vim.o.indentexpr = 'nvim_treesitter#indent()'
 
 -- vim: ts=2 sts=2 sw=2 et
