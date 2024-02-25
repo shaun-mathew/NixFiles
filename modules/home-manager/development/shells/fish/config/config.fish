@@ -32,6 +32,7 @@ alias jr='cd $(git rev-parse --show-toplevel)'
 #Variables
 set -gx EDITOR nvim
 set -g fish_key_bindings fish_hybrid_key_bindings
+set -gx SHELL fish
 
 set -gx NNN_TRASH 1
 
