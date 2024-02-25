@@ -47,6 +47,8 @@ vim.g.maplocalleader = ' '
 -- [[ Install `lazy.nvim` plugin manager ]]
 require 'lazy-bootstrap'
 
+require 'utils'
+
 -- [[ Configure plugins ]]
 require 'lazy-plugins'
 
