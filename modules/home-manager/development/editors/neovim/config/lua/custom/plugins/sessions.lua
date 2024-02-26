@@ -11,9 +11,6 @@ return {
     local resession = require 'resession'
 
     resession.setup(opts)
-    vim.keymap.set('n', '<leader>ss', resession.save)
-    vim.keymap.set('n', '<leader>sl', resession.load)
-    vim.keymap.set('n', '<leader>sd', resession.delete)
 
     local function get_session_name()
       local name = vim.fn.getcwd()
