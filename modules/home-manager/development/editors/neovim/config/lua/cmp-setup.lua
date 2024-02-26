@@ -66,6 +66,10 @@ cmp.setup {
   completion = {
     completeopt = 'menuone,noselect,preview',
   },
+  -- only fast lsps
+  performance = {
+    fetching_timeout = 100,
+  },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
