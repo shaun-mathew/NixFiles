@@ -28,6 +28,7 @@ alias open='xdg-open'
 alias update-dots='nix run home-manager/release-23.11 -- switch --flake ~/dotfiles/#shaun'
 alias nix-clean='nix-collect-garbage  --delete-old'
 alias jr='cd $(git rev-parse --show-toplevel)'
+alias lg='lazygit -p $(git -C . rev-parse --show-toplevel)'
 
 #Variables
 set -gx EDITOR nvim
