@@ -18,6 +18,7 @@
     bind p previous-window
     bind n next-window
     bind ^A last-window
+    bind-key a send-prefix
     bind c new-window -c "$HOME"
     bind '"' choose-window
     bind S choose-session
