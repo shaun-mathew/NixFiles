@@ -50,7 +50,7 @@
     set -g renumber-windows on       # renumber all windows when any window is closed
     set -g set-clipboard on          # use system clipboard
     set -g status-position top       # macOS / darwin style
-    #set -g detach-on-destroy off     # don't exit from tmux when closing a session
+    set -g detach-on-destroy off     # don't exit from tmux when closing a session
     set -g status-position top       # macOS / darwin style
     set -g pane-active-border-style 'fg=magenta,bg=default'
     set -g pane-border-style 'fg=brightblack,bg=default'
