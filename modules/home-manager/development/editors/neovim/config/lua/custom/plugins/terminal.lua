@@ -53,5 +53,7 @@ return {
       lazygit.cwd = args.args and vim.fn.expand(args.args)
       lazygit:toggle(nil, true)
     end, { nargs = '?' })
+
+    vim.keymap.set('n', '<leader>gg', ':Lazygit<CR>', { desc = 'Toggle Lazygit' })
   end,
 }

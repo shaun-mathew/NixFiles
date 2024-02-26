@@ -2,8 +2,6 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
-vim.cmd.colorscheme 'catppuccin'
-
 -- Set highlight on search
 vim.o.hlsearch = false
 
