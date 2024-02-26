@@ -76,6 +76,7 @@ require('lazy').setup({
   {
     'folke/noice.nvim',
     event = 'VeryLazy',
+    enabled = false,
     opts = {
       lsp = {
         progress = {
