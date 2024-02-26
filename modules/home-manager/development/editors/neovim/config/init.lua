@@ -253,6 +253,7 @@ require('lazy').setup({
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
       {
@@ -449,6 +450,7 @@ require('lazy').setup({
   -- Useful plugin to show you pending keybinds.
   {
     'folke/which-key.nvim',
+    event = 'VeryLazy',
     opts = {},
     config = function()
       require('which-key').register {
@@ -608,6 +610,7 @@ require('lazy').setup({
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
+    event = 'VeryLazy',
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -768,9 +771,6 @@ require('lazy').setup({
               ['<leader>A'] = '@parameter.inner',
             },
           },
-        },
-        autotag = {
-          enable = true,
         },
       }
     end,
