@@ -53,6 +53,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require 'utils'
+require 'options'
 
 -- [[ Configure plugins ]]
 require('lazy').setup({
