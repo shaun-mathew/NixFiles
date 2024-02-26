@@ -1,9 +1,12 @@
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
+local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
+
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 local kind_icons = {
   Text = '',
