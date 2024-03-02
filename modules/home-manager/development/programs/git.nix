@@ -12,6 +12,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       core.editor = "nvim";
+      credential.helper = "/usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret";
     };
   };
 }
