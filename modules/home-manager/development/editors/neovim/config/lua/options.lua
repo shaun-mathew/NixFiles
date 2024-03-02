@@ -52,7 +52,7 @@ vim.o.shiftwidth = 2
 
 vim.o.scrolloff = 999
 
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = 'nosplit'
 
 vim.opt.shortmess:append { I = true, C = true }
 
