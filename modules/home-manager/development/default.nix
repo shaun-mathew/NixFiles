@@ -5,5 +5,5 @@
   dotfiles,
   ...
 }: {
-  imports = [./shells ./editors ./programs ./terminals];
+  imports = [./shells ./editors ./programs ./terminals ./languages.nix];
 }
