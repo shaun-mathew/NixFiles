@@ -23,9 +23,10 @@
     alejandra
 
     #nerdfonts
-    (nerdfonts.override {
-      fonts = ["CodeNewRoman" "Iosevka" "IosevkaTerm" "FiraCode"];
-    })
+    nerd-fonts.code-new-roman
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
+    nerd-fonts.fira-code
   ];
 
   programs.nix-index.enable = true;

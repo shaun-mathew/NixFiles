@@ -3,7 +3,13 @@
   lib,
   config,
   dotfiles,
+  pkgs-unstable,
   ...
 }: {
-  imports = [./neovim];
+  imports = [
+    (import ./neovim {
+      inherit config lib dotfiles;
+      pkgs = pkgs-unstable;
+    })
+  ];
 }
